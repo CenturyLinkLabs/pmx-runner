@@ -1,0 +1,6 @@
+.git
+.ruby-gemset
+.ruby-version
+.idea
+Gemfile
+Gemfile.lock
