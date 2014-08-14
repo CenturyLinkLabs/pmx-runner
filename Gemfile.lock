@@ -1,16 +1,31 @@
+GIT
+  remote: https://github.com/CenturyLinkLabs/fleet-api.git
+  revision: 53fc9bbb5763c77e5309ee130c9ab89beac5ad15
+  specs:
+    fleet-api (0.0.1)
+      faraday (= 0.8.9)
+
 GEM
   remote: https://rubygems.org/
   specs:
     archive-tar-minitar (0.5.2)
+    commander (4.2.0)
+      highline (~> 1.6.11)
     docker-api (1.13.2)
       archive-tar-minitar
       excon (>= 0.38.0)
       json
     excon (0.39.3)
+    faraday (0.8.9)
+      multipart-post (~> 1.2.0)
+    highline (1.6.21)
     json (1.8.1)
+    multipart-post (1.2.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  commander
   docker-api
+  fleet-api!
