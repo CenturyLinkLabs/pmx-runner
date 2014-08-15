@@ -1,5 +1,5 @@
 module PmxRunner
-  module DockerBehavior
+  module DockerRunnable
 
     def run
       # container = Docker::Container.send(:new, Docker.connection, container_config_opts.merge('name'=>@name, 'id'=>''))
@@ -41,7 +41,7 @@ module PmxRunner
         proto = port_definition['proto'] || 'tcp'
         host_interface = port_definition['host_interface'] || '0.0.0.0'
         host_port = "#{port_definition['host_port']}"
-        memo["#{port}/#{proto}"] = [{ 'HostIp' => host_interface, 'HostPort' => host_port }]
+        memo["#{port}/#{proto.downcase}"] = [{ 'HostIp' => host_interface, 'HostPort' => host_port }]
       end
     end
 
