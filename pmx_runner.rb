@@ -8,6 +8,7 @@ require_relative 'pmx_runner/image_sorter'
 require_relative 'pmx_runner/template_image'
 require_relative 'pmx_runner/application'
 
+program :name, 'PMX Runner'
 program :version, '0.0.1'
 program :description, 'Executes a given Panamax template'
 
