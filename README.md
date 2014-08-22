@@ -11,5 +11,5 @@ docker run --rm -t -v /var/run/docker.sock:/var/run/docker.sock centurylink/pmx-
 ```
 To run with fleet use the following command 
 ```
-docker run --rm -t -v /var/run/docker.sock:/var/run/docker.sock centurylink/pmx-runner up https://raw.githubusercontent.com/CenturyLinkLabs/panamax-public-templates/master/wordpress.pmx
+docker run --rm -t -v /var/run/docker.sock:/var/run/docker.sock -e FLEETCTL_ENDPOINT=http://10.1.42.1:4001 centurylink/pmx-runner up https://raw.githubusercontent.com/CenturyLinkLabs/panamax-public-templates/master/wordpress.pmx
 ```

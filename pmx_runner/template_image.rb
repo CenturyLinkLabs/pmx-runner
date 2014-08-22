@@ -1,9 +1,24 @@
 module PmxRunner
   class TemplateImage
 
+    @@subclasses = {}
+
     attr_reader :name, :links
 
-    def initialize(options={})
+    def self.register_client(client)
+      @@subclasses[client] = self
+      puts @@subclasses
+    end
+
+    def self.create(options={}, client)
+      if c = @@subclasses[client]
+        c.new(options, client)
+      else
+        raise "Unknown client type #{client}"
+      end
+    end
+
+    def initialize(options={}, client)
       @name = sanitize_name(options['name'])
       @source = options['source']
       @description = options['description']
