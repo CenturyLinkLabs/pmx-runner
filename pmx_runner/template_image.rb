@@ -7,7 +7,6 @@ module PmxRunner
 
     def self.register_client(client)
       @@subclasses[client] = self
-      puts @@subclasses
     end
 
     def self.create(options={}, client)
