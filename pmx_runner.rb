@@ -11,11 +11,11 @@ Dir["pmx_runner/adapters/*.rb"].each {|file| require_relative file }
 
 program :name, 'PMX Runner'
 program :version, '0.0.1'
-program :description, 'Executes a given Panamax template.  Run without a command or options, the "up" command will execute using docker.'
-default_command :up
+program :description, 'Executes a given Panamax template.  Run without a command or options, the "deploy" command will execute using docker.'
+default_command :deploy
 
-command :up do |c|
-  c.summary = 'pmx-runner up URI [options]'
+command :deploy do |c|
+  c.summary = 'pmx-runner deploy URI [options]'
   c.description = 'runs the template'
   c.option '--client STRING', String, 'the client with which the container should be run (defaults to "docker")'
   c.action do |args, options|

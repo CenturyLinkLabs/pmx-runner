@@ -7,5 +7,5 @@ docker build -t centurylink/pmx-runner https://github.com/CenturyLinkLabs/pmx-ru
 
 To run use the following command 
 ```
-docker run --rm -t -v /var/run/docker.sock:/var/run/docker.sock centurylink/pmx-runner up https://raw.githubusercontent.com/CenturyLinkLabs/panamax-public-templates/master/wordpress.pmx
+docker run --rm -t -v /var/run/docker.sock:/var/run/docker.sock centurylink/pmx-runner deploy https://raw.githubusercontent.com/CenturyLinkLabs/panamax-public-templates/master/wordpress.pmx
 ```
