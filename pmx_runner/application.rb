@@ -1,7 +1,7 @@
 module PmxRunner
   class Application
 
-    def initialize(template, client = :fleet)
+    def initialize(template, client = :docker)
       @images = template['images'].each_with_object([]) do |image, memo|
         memo << TemplateImage.create(image, client)
       end
