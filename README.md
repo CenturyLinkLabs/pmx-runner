@@ -9,7 +9,7 @@ The Ruby *pmx_runner* script is itself packaged as a Docker image so it can easi
 docker run --rm -t -v /var/run/docker.sock:/var/run/docker.sock centurylink/pmx-runner deploy <PANAMAX_TEMPLATE_URL>
 ```
 
-The <PANAMAX_TEMPLATE_URL> parameter should be a URL pointing to the raw version of a Panamax template file.
+The `<PANAMAX_TEMPLATE_URL>` parameter should be a URL pointing to the raw version of a Panamax template file.
 
 Since the script interacts with the Docker API in order to query the metadata for the various image layers it needs access to the Docker API socket. The `-v` flag shown above makes the Docker socket available inside the container running the script.
 
