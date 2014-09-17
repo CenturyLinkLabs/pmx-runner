@@ -5,15 +5,12 @@ module PmxRunner
       register_client :docker
 
       def run
-        # container = Docker::Container.send(:new, Docker.connection, container_config_opts.merge('name'=>@name, 'id'=>''))
-        # puts "creating container #{@name} with opts: #{container.info}"
-        # TODO uncomment
         pull_from_source unless local_image_exists?
         container = Docker::Container.create(container_config_opts)
         puts "creating container #{@name} with opts: #{container.info}"
-        puts "container #{container.id} started as #{@name}"
         puts "instantiated container with #{container.info}"
         start_container(container)
+        puts "container #{container.id} started as #{@name}"
       end
 
       def container_config_opts
@@ -50,7 +47,6 @@ module PmxRunner
 
       def start_container(container)
         puts "starting container #{container.info['name']} with opts #{start_config_opts}"
-        # TODO uncomment
         container.start!(start_config_opts)
       end
 
