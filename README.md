@@ -1,4 +1,5 @@
 ## Panamax Template Runner
+[![](https://badge.imagelayers.io/centurylink/pmx-runner.svg)](https://imagelayers.io/?images=centurylink/pmx-runner:latest 'Get your own badge on imagelayers.io')
 
 Runs an application defined in a Panamax template on any Docker host.
 
